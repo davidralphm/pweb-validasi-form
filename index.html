@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form Registrasi Kuliah Offline FTEIC</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container mt-4 mb-4">
+		<div class="form-container">
+			<div class="text-center">
+				<h3>Form Registrasi Kuliah Offline FTEIC</h3>
+			</div>
+
+			<form action="" name="form" method="POST" onsubmit="return validasi()">
+				<div class="form-group mt-5">
+					<label>Nama Lengkap</label>
+					<input type="text" name="nama" placeholder="Nama lengkap" class="form-control" required minlength="2">
+				</div>
+
+				<div class="form-group">
+					<label>NRP</label>
+					<input type="text" name="nrp" placeholder="NRP" class="form-control" required minlength="14" maxlength="14">
+				</div>
+
+				<div class="form-group">
+					<label>Jurusan</label>
+					<select name="jurusan" class="form-control">
+						<option selected disabled hidden>Pilih Jurusan</option>
+						<option>Teknik Komputer</option>
+						<option>Teknik Elektro</option>
+						<option>Teknik Biomedik</option>
+						<option>Teknik Informatika</option>
+						<option>Sistem Informasi</option>
+						<option>Teknologi Informasi</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label>Sudah melakukan vaksinasi pertama?</label>
+					<select onchange="ubahStatusVaksin()" name="status-vaksin-1" required class="form-control">
+						<option selected disabled hidden>Pilih status vaksinasi</option>
+						<option>Belum</option>
+						<option>Sudah</option>
+					</select>
+				</div>
+
+				<div class="vaksinasi-1" style="display: none;">
+					<div class="form-group">
+						<label>Jenis vaksin</label>
+						<select name="jenis-vaksin-1" class="form-control">
+							<option selected disabled hidden>Pilih jenis vaksin</option>
+							<option>Sinovac</option>
+							<option>AstraZaneca</option>
+							<option>NovaVax</option>
+							<option>Sinopharm</option>
+							<option>Pfizer</option>
+							<option>Moderna</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label>Nomor sertifikat</label>
+						<input type="text" name="no-sertif-1" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<label>Tanggal vaksinasi</label>
+						<input type="date" name="tanggal-vaksin-1" class="form-control">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label>Sudah melakukan vaksinasi kedua?</label>
+					<select onchange="ubahStatusVaksin()" name="status-vaksin-2" required class="form-control">
+						<option selected disabled hidden>Pilih status vaksinasi</option>
+						<option>Belum</option>
+						<option>Sudah</option>
+					</select>
+				</div>
+
+				<div class="vaksinasi-2" style="display: none;">
+					<div class="form-group">
+						<label>Jenis vaksin</label>
+						<select name="jenis-vaksin-2" class="form-control">
+							<option selected disabled hidden>Pilih jenis vaksin</option>
+							<option>Sinovac</option>
+							<option>AstraZaneca</option>
+							<option>NovaVax</option>
+							<option>Sinopharm</option>
+							<option>Pfizer</option>
+							<option>Moderna</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label>Nomor sertifikat</label>
+						<input type="text" name="no-sertif-2" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<label>Tanggal vaksinasi</label>
+						<input type="date" name="tanggal-vaksin-2" class="form-control">
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-primary mt-3">Submit</button>
+			</form>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
